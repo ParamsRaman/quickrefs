@@ -1,0 +1,62 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Basics of Probability}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Definition of Probability and Notations}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Other basic properties}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Counting Methods}{3}{section.2}
+\contentsline {section}{\numberline {3}Conditional Independence}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Conditional Independence}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Other basic properties}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Baye's Theorem}{6}{subsection.3.3}
+\contentsline {section}{\numberline {4}Random Variables}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Random Variables}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Discrete and Continuous Probability Functions (p.m.f, p.d.f)}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Cumulative Density Functions (c.d.f)}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Quantile Function}{9}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Joint Density Functions}{9}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Marginal Density Functions}{10}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Conditional Density Functions}{10}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Multi-variate Distributions}{11}{subsection.4.8}
+\contentsline {subsection}{\numberline {4.9}Functions of a random variable, Transformation Theorems}{11}{subsection.4.9}
+\contentsline {section}{\numberline {5}Markov Chains}{12}{section.5}
+\contentsline {section}{\numberline {6}Expectations and Variances}{12}{section.6}
+\contentsline {subsection}{\numberline {6.1}Definition of Expectation and Properties}{12}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Jensen's Inequality}{13}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Definition of Variance and Properties}{13}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Conditional Expectation}{14}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Conditional Variance}{15}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Covariance, Correlation, Schwarz Inequality}{15}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Moment Generating Function}{16}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}The Normal Distribution and useful results}{17}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Log-Normal Distribution}{19}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}Markov Inequality}{19}{subsection.6.10}
+\contentsline {subsection}{\numberline {6.11}Chebyshev's Inequality}{19}{subsection.6.11}
+\contentsline {subsection}{\numberline {6.12}Law of Large Numbers}{19}{subsection.6.12}
+\contentsline {subsection}{\numberline {6.13}Central Limit Theorem and Interpretations}{19}{subsection.6.13}
+\contentsline {section}{\numberline {7}Stochastic Process}{20}{section.7}
+\contentsline {subsection}{\numberline {7.1}Definition of Stochastic Process, Properties and Examples}{20}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Poisson Process}{20}{subsection.7.2}
+\contentsline {section}{\numberline {8}Probability Distributions}{20}{section.8}
+\contentsline {subsection}{\numberline {8.1}Bernoulli}{20}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Binomial}{20}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Multinomial}{20}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Beta}{20}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Gamma}{20}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Dirichlet}{20}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Poisson}{20}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}Gaussian (Normal)}{20}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Log-Normal}{20}{subsection.8.9}
+\contentsline {subsection}{\numberline {8.10}Exponential}{20}{subsection.8.10}
+\contentsline {subsection}{\numberline {8.11}Negative Binomial}{20}{subsection.8.11}
+\contentsline {subsection}{\numberline {8.12}Geometric}{20}{subsection.8.12}
+\contentsline {subsection}{\numberline {8.13}Hyper-Geometric}{20}{subsection.8.13}
+\contentsline {subsection}{\numberline {8.14}Exponential Family notation}{20}{subsection.8.14}
+\contentsline {section}{\numberline {9}Appendix: Useful tools and identities}{21}{section.9}
+\contentsline {subsection}{\numberline {9.1}Product and Quotient rule for derivatives}{21}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Integration by parts}{21}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Integrals of common functions}{21}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Sum of natural numbers series}{21}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Arithmetic, Geometric Series and sums}{21}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6}Power Series}{21}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.7}Taylors Series}{21}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.8}Completing the squares}{21}{subsection.9.8}
+\contentsline {section}{\numberline {10}Acknowledgements}{21}{section.10}

@@ -1,0 +1,61 @@
+\BOOKMARK [1][-]{section.1}{Basics of Probability}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Definition of Probability and Notations}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Other basic properties}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Counting Methods}{}% 4
+\BOOKMARK [1][-]{section.3}{Conditional Independence}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Conditional Independence}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Other basic properties}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Baye's Theorem}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Random Variables}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Random Variables}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Discrete and Continuous Probability Functions \(p.m.f, p.d.f\)}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Cumulative Density Functions \(c.d.f\)}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.4}{Quantile Function}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.5}{Joint Density Functions}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.6}{Marginal Density Functions}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.7}{Conditional Density Functions}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.8}{Multi-variate Distributions}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.9}{Functions of a random variable, Transformation Theorems}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Markov Chains}{}% 19
+\BOOKMARK [1][-]{section.6}{Expectations and Variances}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{Definition of Expectation and Properties}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{Jensen's Inequality}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.3}{Definition of Variance and Properties}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.4}{Conditional Expectation}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.5}{Conditional Variance}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.6}{Covariance, Correlation, Schwarz Inequality}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.7}{Moment Generating Function}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.8}{The Normal Distribution and useful results}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.9}{Log-Normal Distribution}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.10}{Markov Inequality}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.11}{Chebyshev's Inequality}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.12}{Law of Large Numbers}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.13}{Central Limit Theorem and Interpretations}{section.6}% 33
+\BOOKMARK [1][-]{section.7}{Stochastic Process}{}% 34
+\BOOKMARK [2][-]{subsection.7.1}{Definition of Stochastic Process, Properties and Examples}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.2}{Poisson Process}{section.7}% 36
+\BOOKMARK [1][-]{section.8}{Probability Distributions}{}% 37
+\BOOKMARK [2][-]{subsection.8.1}{Bernoulli}{section.8}% 38
+\BOOKMARK [2][-]{subsection.8.2}{Binomial}{section.8}% 39
+\BOOKMARK [2][-]{subsection.8.3}{Multinomial}{section.8}% 40
+\BOOKMARK [2][-]{subsection.8.4}{Beta}{section.8}% 41
+\BOOKMARK [2][-]{subsection.8.5}{Gamma}{section.8}% 42
+\BOOKMARK [2][-]{subsection.8.6}{Dirichlet}{section.8}% 43
+\BOOKMARK [2][-]{subsection.8.7}{Poisson}{section.8}% 44
+\BOOKMARK [2][-]{subsection.8.8}{Gaussian \(Normal\)}{section.8}% 45
+\BOOKMARK [2][-]{subsection.8.9}{Log-Normal}{section.8}% 46
+\BOOKMARK [2][-]{subsection.8.10}{Exponential}{section.8}% 47
+\BOOKMARK [2][-]{subsection.8.11}{Negative Binomial}{section.8}% 48
+\BOOKMARK [2][-]{subsection.8.12}{Geometric}{section.8}% 49
+\BOOKMARK [2][-]{subsection.8.13}{Hyper-Geometric}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.14}{Exponential Family notation}{section.8}% 51
+\BOOKMARK [1][-]{section.9}{Appendix: Useful tools and identities}{}% 52
+\BOOKMARK [2][-]{subsection.9.1}{Product and Quotient rule for derivatives}{section.9}% 53
+\BOOKMARK [2][-]{subsection.9.2}{Integration by parts}{section.9}% 54
+\BOOKMARK [2][-]{subsection.9.3}{Integrals of common functions}{section.9}% 55
+\BOOKMARK [2][-]{subsection.9.4}{Sum of natural numbers series}{section.9}% 56
+\BOOKMARK [2][-]{subsection.9.5}{Arithmetic, Geometric Series and sums}{section.9}% 57
+\BOOKMARK [2][-]{subsection.9.6}{Power Series}{section.9}% 58
+\BOOKMARK [2][-]{subsection.9.7}{Taylors Series}{section.9}% 59
+\BOOKMARK [2][-]{subsection.9.8}{Completing the squares}{section.9}% 60
+\BOOKMARK [1][-]{section.10}{Acknowledgements}{}% 61
