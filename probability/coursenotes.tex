@@ -2,6 +2,7 @@
 \usepackage{notes}
 \usepackage{hyperref}
 \usepackage{centernot}
+\usepackage{mathtools}
 
 % Uncomment these for a different family of fonts
 % \usepackage{cmbright}
@@ -611,23 +612,92 @@ Intuitively what this implies is that as we collect more samples (i.e.: $n$ incr
 \end{itemize}
 
 \subsection{Log-Normal Distribution}
+If $\log(X) \sim \mathcal{N} (\mu, \sigma^2)$, then $X$ has a {\it log-normal} distribution with p.d.f given by:
+\[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \bigg\{ - \frac{(\log(x) - \mu)^2}{2 \sigma^2} \bigg\} \]
+for $x > 0$ and 0 otherwise. \\
 
-\subsection{Markov Inequality}
+{\bf Moment of log-normal distribution}: The m.g.f of $Y$ distributed according to log-normal is given by:
+\[ \psi(t) = \mathbb{E}[e^{tY}] = \exp\{ \mu t + 0.5 t^2 \sigma^2 \} \]
+and, \[ \mathbb{E}[e^{tY}] = \mathbb{E}[e^{t \log X}] = \mathbb{E}[e^{\log X^t}] = \mathbb{E}[X^t] \]
+Therefore, the first moment can be computed as: \[ \mathbb{E}[X] = \exp \{ \mu + 0.5 \sigma^2 \} \]
+
+\subsection{Markov's Inequality}
+Consider a random variable $X$ for which $\Pr(X \ge 0) = 1$. Then, $\forall t > 0$,
+\[ \Pr(X \ge t) \le \frac{\mathbb{E}[X]}{t} \]
+Intuitively, {\it Markov's Inequality} gives an upper bound on how high the random variable $X$ can go relative to the expectation of $X$. However, this upper bound is not very tight and there exist other alternatives.
 
 \subsection{Chebyshev's Inequality}
+Consider a random variable $X$ for which $\mathbb{V}[X]$ exits, then $\forall t > 0$,
+\[ \Pr \bigg( \big| X - \mathbb{E}[X] \big| \ge t \bigg) \le \frac{\mathbb{V[X]}}{t^2} \]
+
+{\it Pf}: Using Markov's inequality. Infact, Chebyshev's inequality can be thought of as an application of Markov's inequality to the random variable $(X - \mu)^2$.\\
+
+Intuitively, {\it Chebyshev's Inequality} gives an upper bound on the how much a random variable $X$ can differ from its expectation, measured in terms of the standard deviation. For instance: using this inequality we might infer that - the probability that $X$ differs from $\mathbb{E}[X]$ by more than 3 standard deviations cannot exceed $\frac{1}{9}$. In general, this bound is useful in determining for example, the number of samples we would need to get an estimate of a desired accuracy level. However, this bound is still very weak and only gives {\it highly conservative} estimates. {\it Central Limit Theorem} (discussed below) is a much more powerful theorem which is more aggressive and provides an order of magnitude tight estimates.\\
+
+\subsection{Chernoff Bounds}
+%Let $X$ be a random variable with m.g.f $\psi$. Then $\forall t \in \R$:
+%\[ \Pr(X \ge t) \le \min_{s > 0} \exp(-st) \psi(s) \]
+%The above bound is most useful when $X$ is the sum of $n$ i.i.d random variables each with finite m.g.f and when $t = nu$ for a large value of $n$ and some fixed $\mu$.\\ \\
+
+Now that we have seen Markov's and Chebyshev's inequalities and observed that Chebyshev produces better bounds than Markov's, let us see if we can produce better bounds than both of them. We can do this if we know more about the distribution. \\
+
+Markov's only uses the first moment. Chebyshev's makes use of the first two moments and hence has more information about the distribution and that can be thought of the reason why we get improved bounds. What if we get access to all the moments? Can we produce better bounds? \\
+
+Chernoff bounds constitute an important special case for upper bounding tail probabilities when we know all the moments for a very special random variable -- namely, the sum of a bunch of i.i.d random variables. The Chernoff bound formula is given below: \\
+
+Let $X = \sum X_i$. Then, $\Pr(X > (1 + \epsilon) \mathbb{E}[X] ) \le 2^ {\frac{- \mathbb{E}[X] \epsilon^2}{3}}$ \\
+There is a similar formula for $\Pr(X > (1 - \epsilon) \mathbb{E}[X] )$. \\
+
+The way to read this is to say that the probability that a sum of i.i.d random variables fluctuates significantly (by a multiplicative ($1 + \epsilon$) factor) from its expected value is small -- somehow for the sum of these i.i.d random variables to come together and produce a significant deviation, many of them need to be significantly off from their individual expectations and this probability is just the product of all the individual probabilities, which intuitively should be small.
+
 
 \subsection{Law of Large Numbers}
+{\bf Convergence in Probability}: Consider a sequence of random variables $Z_1, \ldots, Z_n$. Such a sequence {\it converges in probability} to 'b' if:
+\[ \lim_{n \to \infty} \Pr \bigg( \big| Z_n - b \big| < \epsilon \bigg) = 1 \]
+$\forall \epsilon > 0$.
+In other words, $Z_n$ converges to $b$ in probability if the probability that $Z_n$ lies in each given interval around $b$, no matter how small this interval may be, approaches $1$ as $n \to \infty$.\\
+This property is also denoted by:
+\[ \overline{Z}_n \xrightarrow{p} b \]
 
-\subsection{Central Limit Theorem and Interpretations}
+{\bf Law of Large Numbers}:  Suppose that $X_1, \ldots, X_n$ form a random sample from a distribution for which the mean is $\mu$ and the variance is finite. Let $\overline{X}_n$ denote the sample mean. Then:
+\[ \overline{X}_n \xrightarrow{p} \mu \]
 
+{\bf Continuous Functions of Random Variables}: If $\overline{Z}_n \xrightarrow{p} b$, and if $g(z)$ is a function that is continuous at $z=b$, then:
+\[ g(\overline{Z}_n) \xrightarrow{p} g(b) \]
+
+{\bf Histograms}: Let $X_1, \ldots, X_n$ be a sequence of i.i.d random variables. Let $c_1 < c_2$ be two constants. Define $Y_i = 1$ if $c_1 \le X_i < c_2$ and $Y_i = 0$ if not. Then:
+\[ \overline{Y}_n = \frac{1}{n} \sum_{i=1}^n Y_i \] is the proportion of $X_1, \ldots, X_n$ that lie in the interval $[c_1, c_2]$, and $\overline{Y}_n \xrightarrow{p} \Pr(c_1 \le X_1 < c_2)$. \\
+This theorem is the justification of {\it why histograms are effective as estimates of probability density}.
+
+\subsection{Central Limit Theorem (CLT) }
+Let $X_1, \ldots, X_n$ be i.i.d samples from a distribution with mean $\mu$ and variance $\sigma^2$ with $0 < \sigma^2 < \infty$. Then $\forall x \in \R$:
+\[ \lim_{n \to \infty} \Pr \bigg( \frac{\overline{X}_n - \mu}{\frac{\sigma}{\sqrt{n}}} \le x \bigg) = \Phi(x) \]
+where $\Phi(x)$ is the c.d.f of a standard normal distribution.\\
+
+Interpretations:\\
+If $X_1, \ldots, X_n$ are i.i.d samples with mean $\mu$ and variance $\sigma^2$ from {\it any distribution}, then:
+\begin{itemize}
+\item The sample means when standardized as {\it approximately distributed} according to the standard normal:
+\[ \frac{\overline{X}_n - \mu}{\frac{\sigma}{\sqrt{n}}} \approx \mathcal{N} (0, 1) \]
+
+\item The sample means are themselves {\it approximately distributed} according to the normal distribution as shown below:
+\[ \overline{X}_n \approx \mathcal{N} (\mu, \frac{\sigma^2}{n}) \]
+
+\item Sum of the samples obtained are also {\it approximately distributed} according to the normal distribution as shown below:
+\[ \sum_{i=1}^n X_i \approx \mathcal{N} (n \mu, n \sigma^2) \]
+\end{itemize}
+As a side note, what CLT says is that - if the original distribution is too far from a normal distribution, a large number of samples might be needed to get a good approximation, but the approximation {\it always follows} a normal distribution no matter what that original distribution is.
 
 \newpage
 
 \section{Stochastic Process}
 \subsection{Definition of Stochastic Process, Properties and Examples}
+TODO
 \subsection{Poisson Process}
+Observe that conditioned on the following variables: $\kappa_{u}^{rte}, \tau_i^{rte},$ and $b_{ui} := \sum_{k} \phi_{uik}$ the updates of $\gamma_u$ and $\lambda_i$ become  independent. So what this means is that if you have K as the latent variable dimension, then you can distribute the computation across K machines as long as you keep the above three variables in sync. In particular, $\kappa_u$ is a \# of users dimensional vector, $\tau_i$ is a \# of items dimensional vector, and there are \# of observations many $b_{ui}$. The same tricks we used in Nomad-LDA should apply here.
 
 \section{Probability Distributions}
+TODO
 \subsection{Bernoulli}
 \subsection{Binomial}
 \subsection{Multinomial}
@@ -647,8 +717,23 @@ Intuitively what this implies is that as we collect more samples (i.e.: $n$ incr
 
 \section{Appendix: Useful tools and identities}
 \subsection{Product and Quotient rule for derivatives}
+{\bf Product Rule}:
+\[ (fg)' = f'g + gf' \]
+{\bf Quotient Rule}:
+\[ \bigg( \frac{f}{g} \bigg)' = \frac{f'g - g'f}{g^2} \]
+
 \subsection{Integration by parts}
+\[ \int u dv = uv - \int v du \]
+and,
+\[ \int\limits_{a}^{b} u dv = uv \bigg|_{a}^{b} - \int\limits_{a}^{b} v du \]
+
 \subsection{Integrals of common functions}
+\subsection{L-'Hopital's Rule for Limits}
+Suppose we have one of the following cases:\\
+\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{0}{0} \]
+\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\pm \infty}{\pm \infty} \]
+where $a$ can be any real number, $\infty$ or $-\infty$. In these cases we have:
+\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} \]
 \subsection{Sum of natural numbers series}
 \subsection{Arithmetic, Geometric Series and sums}
 \subsection{Power Series}

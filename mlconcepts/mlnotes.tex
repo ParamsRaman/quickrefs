@@ -1,0 +1,173 @@
+\documentclass[english, 11pt]{article}
+\usepackage{notes}
+\usepackage{hyperref}
+\usepackage{centernot}
+\usepackage{mathtools}
+
+% Uncomment these for a different family of fonts
+% \usepackage{cmbright}
+% \renewcommand{\sfdefault}{cmss}
+% \renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\thiscoursecode}{Machine Learning}
+\newcommand{\thiscoursename}{(Quick Reference)}
+\newcommand{\thisprof}{Parameswaran Raman}
+\newcommand{\me}{Liam Horne}
+\newcommand{\thisterm}{2018}
+\newcommand{\website}{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{axiom}{Axiom}
+
+% Headers
+\chead{\thiscoursecode \ Course Notes}
+\lhead{\thisterm}
+
+
+%%%%%% TITLE %%%%%%
+\newcommand{\notefront} {
+\pagenumbering{roman}
+\begin{center}
+
+{\ttfamily \url{\website}} {\small}
+
+\textbf{\Huge{\noun{\thiscoursecode}}}{\Huge \par}
+
+{\large{\noun{\thiscoursename}}}\\ \vspace{0.1in}
+
+  {\noun \thisprof} \ $\bullet$ \ {\noun \thisterm} \ $\bullet$ \ {\noun {UC Santa Cruz}} \\
+
+  \end{center}
+  }
+
+% Begin Document
+\begin{document}
+
+  % Notes front
+  \notefront
+  % Table of Contents and List of Figures
+  \tocandfigures
+  % Abstract
+  \doabstract{I prepared these notes as a resource to help myself; and anyone else interested, in quickly reviewing concepts in this course. My goal is to provide a  very concise, end-to-end resource that covers all the important material discussed in a course on this topic. If you spot any errors or have any suggestions, please contact me directly at \href{mailto:params@ucsc.edu}{params@ucsc.edu}.  \\ \\ Thanks for reading!} 
+
+\newpage
+
+\section{Probability basics}
+Refer to probability notes.
+
+\section{Matrix Algebra basics}
+\begin{itemize}
+\item various types of vector and matrix norms
+\item sparse representation of vectors and matrices
+\item gradient, hessian, jacobian of matrices
+\item positive definite, negative definite properties and eigen-values, eigen-vectors, rank
+\item Why low-rank matters? Or why is it important?
+\item condition \# of matrices and degeneracy conditions
+\item review types of factorization ($LU, PLU, LDU, LL^T, QR, SVD$) and their computational complexity
+\item how QR helps in least-squares problems?
+\item quadratic problem form (gradient, hessian for it)
+\end{itemize}
+(source: skim through appendix of griva-sofer-nash, nocedal or PRML)
+
+\section{Optimization}
+\begin{itemize}
+\item intuition behind lagrange multipliers?
+\item Taylor series, power series, infinite series sums
+\item constrained and unconstrained optimization
+\item non-linear optimization methods (gradient descent and first-order optimality conditions, conjugate gradient, newton methods, quasi-newton and L-BFGS, augmented lagrangian, penalty methods, SGD)
+\item wolfe/armijo rules for line search
+\item strong convexity, lipschitz conditions
+\item KKT conditions
+\item gradient descent, mirror descent, projected gradient descent, sub-gradients
+\item types of convergence (linear, quadratic, super-linear, etc), convergence rates of various optimization methods
+\end{itemize}
+(source: skim through griva-sofer-nash, keerthi's slides/writeup, nocedal or gleich notes)
+
+
+\section{Bayesian Inference / Graphical Models}
+\begin{itemize}
+\item AMS 203 notes, exp family, conjugate distributions, frequently used probability distributions, stats-cookbook
+\item generative vs discriminative models (naive bayes vs logistic regression, HMM vs CRFs), reference (LINK)
+\item mixture models (readup some basic version like LDA), variational inference brush up (read your presentation slides, notes of derivations, etc), distributed-gibbs-for-LDA (LINK), exchangeability, de-finetti?s theorem
+\item approximate inference: mcmc vs variational inference, Metropolis-Hastings, Gibbs
+\item non-parametric bayesian models (skim through your course notes)
+\end{itemize}
+
+\section{General Machine Learning}
+\begin{itemize}
+\item linear regression (objective function, closed form solution, pseudo-inverse, various ways of computing inverse of a matrix)
+\item linear regression vs PCA
+\item logistic regression (objective function for both binary and multi-class, derivations)
+\item svm?s (primal and dual formulations, kernel tricks, scaling issues, optimization, smo) - watch keerthi?s video, look at: connection b/w soft-margin formulation and hinge-loss based regularized risk minimization formulation.
+\item k-means
+\item EM algorithm (short intro)
+\item evaluation metrics (precision, recall, f-score (macro and micro), accuracy, AUC, NDCG)
+\item bias variance decomposition, bias-variance tradeoff, relationships to underfitting and overfitting
+\item recommender systems (common ways to build recommender systems? see andrew ng ml class notes)
+\item matrix factorization stuff (svd, low rank approximations, nmf, how to formulate recommender problems as matrix factorization, how to solve them using als or sgd, or others? parallelization?)
+\item learning to rank formulations
+\item information theory basics (mutual information, entropy, relative entropy (ie: KL divergence), bregman divergence, its diagram and its properties). see wiki for bregman divergence intro and inderjit's talk for details.
+\item types of updates: GD vs EG, implicit vs explicit, batch vs stochastic
+\item role of bias term? https://www.quora.com/Why-do-we-need-the-bias-term-in-ML-algorithms-such-as-linear-regression-and-neural-networks
+\item deep learning (brush up the diff types of deep learning models)
+\item what are decision trees, random forests, gradient boosted decision trees (differences b/w these and advantages of GBDT?)
+\item bagging and boosting methods - various types of doing bagging, AdaBoost
+\item pros and cons of various ml models (eg: advantages of decision trees, naive bayes, etc in practical applications)
+\end{itemize}
+(source: skim through PRML book)
+
+\section{Random Projections / Learning Theory}
+\begin{itemize}
+\item VC dimensions, etc (look up a course / textbook and read important topics in Theoretical ML)
+\item Important inequalities and theorems (Markovs, Chebychev, Hoeffding, Johnson Lindenstass)
+\item Sketching, Leverage Scores and see notes from Randomized Numerical Lin Algebra course (mahoney or dreinas)
+\item Similarity Search stuff (LSH, distance measures, hashing) - read papers / talks on this topic
+\item Page Rank, Random Walks
+\item How a lot of these techniques in approximation algorithms are used in efficient distance computations / NN search / graph algorithms (see Sesh?s work), these are especially useful for Twitter like companies
+\end{itemize}
+	
+
+
+\section{Deep Learning}
+\begin{itemize}
+\item Brush up types of DNN architectures
+\begin{itemize}
+\item Auto-encoder decoders, Deep Auto-encoders
+\item Probabilistic Deep Learning models (Variational Auto-Encoder, GANs)
+\item ResNets
+\item Boltzman Machines
+\item CNN
+\item RNN, LSTMs, GRU, Attention Mechanism
+\end{itemize}
+
+\item How to do the following tasks using DNNs?
+\begin{itemize}
+\item Deep Recommender Systems
+\item Multiclass classification
+\item Sequence to sequence (translation)
+\item Named Entity Recognition
+\item Simple Computer Vision (Image Detection / Video Detection) application
+\item Dimensionality Reduction / creating embeddings
+\end{itemize}
+
+\item Training
+\begin{itemize}
+\item Tips and Tricks (momentum, adagrad, adam, early stopping, batch normalization, different validation techniques, types of activation functions and heuristics on when to use what)
+\item Data, Model parallelism techniques
+\item How to run on GPUs?
+\item Familiarize with some libraries (TensorFlow, PyTorch, MXNet)
+\end{itemize}
+\end{itemize}
+(source: skim through Deep Learning Stanford courses, DNN books)
+
+\section{Your Research Projects}
+bla bla
+
+\newpage
+
+\section{Appendix: Other random stuff}
+\subsection{bla bla}
+\section{Acknowledgements}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \end{document}
